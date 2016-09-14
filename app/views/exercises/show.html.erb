@@ -1,0 +1,11 @@
+<h1>Exercises of <%= current_user.full_name %></h1>
+
+<br>
+<br>
+Exercise Duration : <%= @exercise.duration_in_min %> <br>
+Workout : <%= @exercise.workout %> <br>
+Date : <%= @exercise.workout_date %> <br>
+
+<br>
+<br>
+<%= link_to "Back", user_exercises_path(current_user), class: "btn btn-default" %>
