@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-  	@athletes = User.all.order("created_at desc")
+  	@athletes = User.paginate(:page => params[:page])
   end
 
 end

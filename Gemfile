@@ -28,6 +28,7 @@ gem 'devise', '~> 4.2'
 
 gem 'jquery-ui-rails'
 
+gem 'will_paginate-bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
