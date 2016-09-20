@@ -6,6 +6,12 @@ class User < ActiveRecord::Base
 
   has_many :exercises
 
+
+  has_many :friendships
+  has_many :friends, through: :friendships, class_name: "User"
+
+
+
   self.per_page = 3
 
   def full_name
@@ -24,5 +30,10 @@ class User < ActiveRecord::Base
   	end
 
   end
+
+  def follows_or_same?(new_friend)
+    friendships.map(&:friend).include?(new_friend) || self == new_friend
+  end
+
 
 end
